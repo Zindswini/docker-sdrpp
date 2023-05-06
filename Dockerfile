@@ -14,4 +14,7 @@ RUN mkdir /sdrpp && cd /sdrpp
 RUN git clone https://github.com/AlexandreRouma/SDRPlusPlus.git /sdrpp
 RUN cd /sdrpp && mkdir build && cd build && cmake .. && make && make install
 
+# Cleanup Build dir
+RUN rm -rf /sdrpp
+
 ENTRYPOINT ["/usr/bin/sdrpp", "--server"]
