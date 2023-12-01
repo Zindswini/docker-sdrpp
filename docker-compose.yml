@@ -1,0 +1,10 @@
+version: "3"
+services:
+  sdrpp:
+    image: docker.io/zindswini/docker-sdrpp:main
+    stop_grace_period: 30s # Needed for podman
+    restart: always
+    ports:
+      - 5259:5259
+    devices: # This passes all usb devices to container. Might be overkill for your setup.
+      - /dev/bus/usb
