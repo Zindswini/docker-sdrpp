@@ -4,7 +4,7 @@ STOPSIGNAL SIGKILL
 
 # Install general build dependencies
 RUN apt update
-RUN apt install -y git build-essential cmake libzstd-dev libvolk2-dev libglfw3-dev libfftw3-dev
+RUN apt install -y git build-essential cmake libzstd-dev libvolk-dev libglfw3-dev libfftw3-dev
 
 # Install device-specific dependencies
 RUN apt install -y libsoapysdr-dev soapysdr-module-all libairspy-dev libairspyhf-dev libhackrf-dev librtlsdr-dev libiio-dev libad9361-dev librtaudio-dev
